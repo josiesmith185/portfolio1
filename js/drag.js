@@ -21,3 +21,16 @@ document.querySelectorAll('.window').forEach(el => {
     }
   });
 });
+
+// Update clock in taskbar
+function updateClock() {
+  const now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12 || 12;
+  const timeString = `${hours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
+  document.getElementById('clock').textContent = timeString;
+}
+setInterval(updateClock, 1000);
+updateClock();

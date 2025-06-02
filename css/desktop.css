@@ -3,20 +3,29 @@ body {
   background: teal;
   font-family: "MS Sans Serif", sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
+
 .taskbar {
-  position: fixed;
+  position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
+  height: 30px;
   background: #c0c0c0;
   padding: 5px 10px;
   font-size: 14px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #000;
+  box-sizing: border-box;
 }
+
 .window {
   position: absolute;
   background: #fff;
