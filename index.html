@@ -3,13 +3,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Josie Smith | Win95 Portfolio</title>
+  <title>Josie Smith | Portfolio</title>
   <link rel="stylesheet" href="https://unpkg.com/98.css" />
   <link rel="stylesheet" href="css/desktop.css" />
+  <style>
+    .main-window {
+      position: absolute;
+      top: 100px;
+      left: 300px;
+      width: 400px;
+    }
+    .main-window .window-body {
+      text-align: center;
+      font-size: 16px;
+    }
+    .main-window .window-body h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    .main-window .window-body p {
+      margin-bottom: 20px;
+    }
+    .main-window .window-body a {
+      margin: 0 10px;
+    }
+    .footer-links {
+      position: fixed;
+      bottom: 30px;
+      right: 10px;
+      font-size: 14px;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Desktop Icons -->
+  <!-- Left Desktop Icons -->
   <div class="desktop-icon" style="top: 20px; left: 20px;" data-target="games">
     <img src="https://img.icons8.com/?size=48&id=9n3ip3s8MzLw&format=png" alt="Games"/>
     <div>Games</div>
@@ -23,56 +59,39 @@
     <div>Programming</div>
   </div>
   <div class="desktop-icon" style="top: 260px; left: 20px;" data-target="about">
-    <img src="https://img.icons8.com/?size=48&id=47791&format=png" alt="About Me"/>
-    <div>About Me</div>
+    <img src="https://img.icons8.com/?size=48&id=47791&format=png" alt="About"/>
+    <div>About</div>
   </div>
 
-  <!-- Windows -->
-  <div class="window" id="games" style="left: 200px; top: 60px; width: 300px; display: none;">
-    <div class="title-bar"><div class="title-bar-text">🕹️ Games</div></div>
-    <div class="window-body">
-      <p><strong>Move Shoot Avoid</strong><br/>2D shooter with random enemy spawns.</p>
-      <a href="#">Play Demo</a>
-      <p><strong>Echo Abyss</strong><br/>Multiplayer horror deception game.</p>
-      <a href="#">Project Page</a>
+  <!-- Center Main Window -->
+  <div class="window main-window">
+    <div class="title-bar">
+      <div class="title-bar-text">Portfolio</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Close"></button>
+      </div>
     </div>
-  </div>
-
-  <div class="window" id="art" style="left: 520px; top: 80px; width: 300px; display: none;">
-    <div class="title-bar"><div class="title-bar-text">🧊 3D Art</div></div>
     <div class="window-body">
-      <p>Game-ready models created in Blender:</p>
-      <ul>
-        <li>Objects</li>
-        <li>Environment</li>
-        <li>Character</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="window" id="programming" style="left: 220px; top: 300px; width: 300px; display: none;">
-    <div class="title-bar"><div class="title-bar-text">📦 Programming</div></div>
-    <div class="window-body">
-      <p><strong>Reddit Sentiment Analysis</strong><br/>Sentiment tracking on subreddit posts.</p>
-      <a href="#">View on GitHub</a>
-      <p><strong>Kinect Real-Time Gesture</strong><br/>Gesture recognition with Kinect SDK.</p>
-      <a href="#">View Demo</a>
-    </div>
-  </div>
-
-  <div class="window" id="about" style="left: 400px; top: 220px; width: 300px; display: none;">
-    <div class="title-bar"><div class="title-bar-text">👤 About Me</div></div>
-    <div class="window-body">
-      <p>Hi! I'm Josie Smith, an indie game developer and creative technologist.</p>
-      <p><a href="#">Resume</a> | <a href="#">Contact</a></p>
+      <h1>Josie Smith</h1>
+      <p>Game Developer & Designer</p>
+      <a href="#" class="button">Resume</a>
+      <a href="#" class="button">Contact</a>
     </div>
   </div>
 
   <!-- Start Menu -->
   <div id="start-menu">
-    <a href="#" onclick="document.getElementById('about').style.display='block';">👤 About Me</a>
     <a href="#">📄 Resume</a>
+    <a href="#">✉️ Contact</a>
     <a href="#">🔗 GitHub</a>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="footer-links">
+    <a href="#">Email</a>
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
   </div>
 
   <!-- Taskbar -->
