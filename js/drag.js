@@ -1,19 +1,23 @@
 
+function formatClock(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12 || 12;
+  return `${hours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
+}
+
 document.querySelectorAll('.window').forEach(el => {
   let offsetX, offsetY, isDown = false;
-
   const header = el.querySelector('.title-bar');
   header.style.cursor = "move";
-
   header.addEventListener('mousedown', (e) => {
     isDown = true;
     offsetX = e.clientX - el.offsetLeft;
     offsetY = e.clientY - el.offsetTop;
     el.style.zIndex = 1000;
   });
-
   document.addEventListener('mouseup', () => isDown = false);
-
   document.addEventListener('mousemove', (e) => {
     if (isDown) {
       el.style.left = `${e.clientX - offsetX}px`;
@@ -22,15 +26,26 @@ document.querySelectorAll('.window').forEach(el => {
   });
 });
 
-// Update clock in taskbar
+// Insert correct time immediately
 function updateClock() {
   const now = new Date();
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12 || 12;
-  const timeString = `${hours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
-  document.getElementById('clock').textContent = timeString;
+  document.getElementById('clock').textContent = formatClock(now);
 }
-setInterval(updateClock, 1000);
 updateClock();
+setInterval(updateClock, 1000);
+
+document.querySelector('.start-button').addEventListener('click', () => {
+  const menu = document.getElementById('start-menu');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+});
+
+// Desktop icon click opens window
+document.querySelectorAll('[data-target]').forEach(icon => {
+  icon.addEventListener('dblclick', () => {
+    const target = document.getElementById(icon.dataset.target);
+    if (target) {
+      target.style.display = 'block';
+      target.style.zIndex = 999;
+    }
+  });
+});

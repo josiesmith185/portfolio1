@@ -9,7 +9,26 @@
 </head>
 <body>
 
-  <div class="window" style="left: 40px; top: 40px; width: 300px;">
+  <!-- Desktop Icons -->
+  <div class="desktop-icon" style="top: 20px; left: 20px;" data-target="programming">
+    <img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="Programming"/>
+    <div>Programming</div>
+  </div>
+  <div class="desktop-icon" style="top: 100px; left: 20px;" data-target="games">
+    <img src="https://img.icons8.com/?size=48&id=9n3ip3s8MzLw&format=png" alt="Games"/>
+    <div>Games</div>
+  </div>
+  <div class="desktop-icon" style="top: 180px; left: 20px;" data-target="studybuddy">
+    <img src="https://img.icons8.com/?size=48&id=4Ae0CD5MGnF7&format=png" alt="Study Buddy"/>
+    <div>Study Buddy</div>
+  </div>
+  <div class="desktop-icon" style="top: 260px; left: 20px;" data-target="about">
+    <img src="https://img.icons8.com/?size=48&id=47791&format=png" alt="About"/>
+    <div>About</div>
+  </div>
+
+  <!-- Windows -->
+  <div class="window" id="programming" style="left: 180px; top: 40px; width: 300px; display: none;">
     <div class="title-bar"><div class="title-bar-text">📁 Programming</div></div>
     <div class="window-body">
       <p><strong>Reddit Sentiment Analysis</strong><br/>NLP tool analyzing subreddit sentiment.</p>
@@ -19,7 +38,7 @@
     </div>
   </div>
 
-  <div class="window" style="left: 400px; top: 60px; width: 300px;">
+  <div class="window" id="games" style="left: 500px; top: 60px; width: 300px; display: none;">
     <div class="title-bar"><div class="title-bar-text">🕹️ Games</div></div>
     <div class="window-body">
       <p><strong>Move Shoot Avoid</strong><br/>Arcade shooter with Unity.</p>
@@ -29,7 +48,7 @@
     </div>
   </div>
 
-  <div class="window" style="left: 220px; top: 300px; width: 300px;">
+  <div class="window" id="studybuddy" style="left: 400px; top: 300px; width: 300px; display: none;">
     <div class="title-bar"><div class="title-bar-text">📱 Study Buddy App</div></div>
     <div class="window-body">
       <p>Gamified Pomodoro app with companions and themes.</p>
@@ -37,9 +56,24 @@
     </div>
   </div>
 
+  <div class="window" id="about" style="left: 300px; top: 200px; width: 300px; display: none;">
+    <div class="title-bar"><div class="title-bar-text">👤 About Me</div></div>
+    <div class="window-body">
+      <p>Hi! I’m Josie Smith, an aspiring game developer with a flair for creative tech and retro interfaces.</p>
+    </div>
+  </div>
+
+  <!-- Start Menu -->
+  <div id="start-menu">
+    <a href="#" onclick="document.getElementById('about').style.display='block';">👤 About Me</a>
+    <a href="#">📄 Resume</a>
+    <a href="#">🔗 GitHub</a>
+  </div>
+
+  <!-- Taskbar -->
   <div class="taskbar">
-    <span>🟢 Start</span>
-    <span id="clock">--:--</span>
+    <span class="start-button">🟢 Start</span>
+    <span id="clock"></span>
   </div>
 
   <script src="js/drag.js"></script>
