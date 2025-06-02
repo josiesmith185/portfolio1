@@ -27,13 +27,6 @@ body {
   z-index: 999;
 }
 
-.window {
-  position: absolute;
-  background: #fff;
-  border: 2px solid black;
-  cursor: move;
-}
-
 .desktop-icon {
   position: absolute;
   width: 64px;
