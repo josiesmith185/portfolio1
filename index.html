@@ -1,72 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Josie Smith | Portfolio</title>
-
-  <!-- ✅ Bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Josie Smith | Win95 Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/98.css" />
+  <style>
+    body {
+      background: teal;
+      padding: 20px;
+      font-family: 'MS Sans Serif', sans-serif;
+    }
+    .window {
+      width: 400px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .window-body img {
+      width: 100%;
+    }
+  </style>
 </head>
-<body class="bg-light">
-  <div class="container py-5">
-    <h1 class="mb-4">🎮 Josie Smith – Retro Portfolio</h1>
+<body>
 
-    <!-- Programming -->
-    <div class="card mb-4">
-      <div class="card-header">📁 Programming</div>
-      <div class="card-body">
-        <h5>Reddit Sentiment Analysis</h5>
-        <p>Python NLP tool analyzing sentiment in subreddit posts. Includes keyword heatmaps.</p>
-        <a href="#" class="btn btn-sm btn-info">View on GitHub</a>
-        <hr />
-        <h5>Kinect Real-Time Gesture</h5>
-        <p>Real-time body gesture recognition using Kinect SDK for custom input controls.</p>
-        <a href="#" class="btn btn-sm btn-info">View Demo</a>
+  <div class="window" style="z-index: 1;">
+    <div class="title-bar">
+      <div class="title-bar-text">📁 Programming</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close"></button>
       </div>
     </div>
-
-    <!-- Games -->
-    <div class="card mb-4">
-      <div class="card-header">🕹️ Games</div>
-      <div class="card-body">
-        <h5>Move Shoot Avoid</h5>
-        <p>2D arcade-style shooter made in Unity. Includes procedural enemies and collisions.</p>
-        <a href="#" class="btn btn-sm btn-success">Play Demo</a>
-        <hr />
-        <h5>Echo Abyss</h5>
-        <p>Multiplayer horror deception game with AI monsters and time-warped lore.</p>
-        <a href="#" class="btn btn-sm btn-success">Project Page</a>
-      </div>
-    </div>
-
-    <!-- 3D Art -->
-    <div class="card mb-4">
-      <div class="card-header">🧊 3D Art</div>
-      <div class="card-body">
-        <p>Game-ready models created in Blender.</p>
-        <div class="row">
-          <div class="col-4"><img src="assets/images/object.png" class="img-fluid" alt="Object" /></div>
-          <div class="col-4"><img src="assets/images/environment.png" class="img-fluid" alt="Environment" /></div>
-          <div class="col-4"><img src="assets/images/character.png" class="img-fluid" alt="Character" /></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile -->
-    <div class="card mb-4">
-      <div class="card-header">📱 Study Buddy App</div>
-      <div class="card-body">
-        <p>Gamified Pomodoro app with character companions and ambient sounds.</p>
-        <a href="#" class="btn btn-sm btn-warning">View App</a>
-      </div>
+    <div class="window-body">
+      <p><b>Reddit Sentiment Analysis</b><br />NLP tool analyzing subreddit sentiment.</p>
+      <p><a href="#">View on GitHub</a></p>
+      <p><b>Kinect Real-Time Gesture</b><br />Real-time gesture input with Kinect SDK.</p>
+      <p><a href="#">View Demo</a></p>
     </div>
   </div>
 
-  <!-- ✅ Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="window" style="z-index: 1;">
+    <div class="title-bar">
+      <div class="title-bar-text">🕹️ Games</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p><b>Move Shoot Avoid</b><br />2D arcade shooter with Unity.</p>
+      <p><a href="#">Play Demo</a></p>
+      <hr />
+      <p><b>Echo Abyss</b><br />Multiplayer horror deception game.</p>
+      <p><a href="#">Project Page</a></p>
+    </div>
+  </div>
+
+  <div class="window" style="z-index: 1;">
+    <div class="title-bar">
+      <div class="title-bar-text">🧊 3D Art</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p>Game-ready models made in Blender.</p>
+      <ul>
+        <li>Objects</li>
+        <li>Environment</li>
+        <li>Character</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="window" style="z-index: 1;">
+    <div class="title-bar">
+      <div class="title-bar-text">📱 Mobile</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p><b>Study Buddy App</b><br />Gamified Pomodoro app with character theming.</p>
+      <p><a href="#">View App</a></p>
+    </div>
+  </div>
+
 </body>
 </html>
-
-
