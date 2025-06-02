@@ -1,0 +1,25 @@
+
+body {
+  background: teal;
+  font-family: "MS Sans Serif", sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #c0c0c0;
+  padding: 5px 10px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #000;
+}
+.window {
+  position: absolute;
+  background: #fff;
+  border: 2px solid black;
+  cursor: move;
+}

@@ -5,84 +5,43 @@
   <meta charset="UTF-8" />
   <title>Josie Smith | Win95 Portfolio</title>
   <link rel="stylesheet" href="https://unpkg.com/98.css" />
-  <style>
-    body {
-      background: teal;
-      padding: 20px;
-      font-family: 'MS Sans Serif', sans-serif;
-    }
-    .window {
-      width: 400px;
-      margin-bottom: 20px;
-      position: relative;
-    }
-    .window-body img {
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="css/desktop.css" />
 </head>
 <body>
 
-  <div class="window" style="z-index: 1;">
-    <div class="title-bar">
-      <div class="title-bar-text">📁 Programming</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close"></button>
-      </div>
-    </div>
+  <div class="window" style="left: 40px; top: 40px; width: 300px;">
+    <div class="title-bar"><div class="title-bar-text">📁 Programming</div></div>
     <div class="window-body">
-      <p><b>Reddit Sentiment Analysis</b><br />NLP tool analyzing subreddit sentiment.</p>
-      <p><a href="#">View on GitHub</a></p>
-      <p><b>Kinect Real-Time Gesture</b><br />Real-time gesture input with Kinect SDK.</p>
-      <p><a href="#">View Demo</a></p>
+      <p><strong>Reddit Sentiment Analysis</strong><br/>NLP tool analyzing subreddit sentiment.</p>
+      <a href="#">View on GitHub</a>
+      <p><strong>Kinect Real-Time Gesture</strong><br/>Gesture input with Kinect SDK.</p>
+      <a href="#">View Demo</a>
     </div>
   </div>
 
-  <div class="window" style="z-index: 1;">
-    <div class="title-bar">
-      <div class="title-bar-text">🕹️ Games</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close"></button>
-      </div>
-    </div>
+  <div class="window" style="left: 400px; top: 60px; width: 300px;">
+    <div class="title-bar"><div class="title-bar-text">🕹️ Games</div></div>
     <div class="window-body">
-      <p><b>Move Shoot Avoid</b><br />2D arcade shooter with Unity.</p>
-      <p><a href="#">Play Demo</a></p>
-      <hr />
-      <p><b>Echo Abyss</b><br />Multiplayer horror deception game.</p>
-      <p><a href="#">Project Page</a></p>
+      <p><strong>Move Shoot Avoid</strong><br/>Arcade shooter with Unity.</p>
+      <a href="#">Play Demo</a>
+      <p><strong>Echo Abyss</strong><br/>Multiplayer horror deception game.</p>
+      <a href="#">Project Page</a>
     </div>
   </div>
 
-  <div class="window" style="z-index: 1;">
-    <div class="title-bar">
-      <div class="title-bar-text">🧊 3D Art</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close"></button>
-      </div>
-    </div>
+  <div class="window" style="left: 220px; top: 300px; width: 300px;">
+    <div class="title-bar"><div class="title-bar-text">📱 Study Buddy App</div></div>
     <div class="window-body">
-      <p>Game-ready models made in Blender.</p>
-      <ul>
-        <li>Objects</li>
-        <li>Environment</li>
-        <li>Character</li>
-      </ul>
+      <p>Gamified Pomodoro app with companions and themes.</p>
+      <a href="#">View App</a>
     </div>
   </div>
 
-  <div class="window" style="z-index: 1;">
-    <div class="title-bar">
-      <div class="title-bar-text">📱 Mobile</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close"></button>
-      </div>
-    </div>
-    <div class="window-body">
-      <p><b>Study Buddy App</b><br />Gamified Pomodoro app with character theming.</p>
-      <p><a href="#">View App</a></p>
-    </div>
+  <div class="taskbar">
+    <span>🟢 Start</span>
+    <span>4:44 PM</span>
   </div>
 
+  <script src="js/drag.js"></script>
 </body>
 </html>
